@@ -35,7 +35,7 @@ const userSchema = mongoose.Schema({
 })
 
 // 여기서 next는 user.save 의미.. 인자 안넣으면 error 발생 함...
-userSchema.pre('save', function( next ){
+userSchema.pre('save', function(next){
     var user = this;
 
     if(user.isModified('password')){
@@ -51,6 +51,8 @@ userSchema.pre('save', function( next ){
                     next();
             })
         })
+    } else {
+        next();
     }
 })
 
