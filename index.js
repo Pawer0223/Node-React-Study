@@ -1,8 +1,15 @@
 const express = require('express')
 const app = express()
 const port = 5000
-
 const mongoose = require("mongoose")
+const bodyParser = require('body-parser');
+const { User } = require("./models/User");
+
+// application/x-www-form-unlencoded
+app.use(bodyParser.urlencoded({extended: true}));
+// application/json
+app.use(bodyParser.json());
+
 mongoose.connect('mongodb+srv://taesan:0000@nodeproject.ennhq.mongodb.net/test?retryWrites=true&w=majority',{
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false
 }).then(() => console.log('MongoDB Connected...'))
@@ -10,6 +17,18 @@ mongoose.connect('mongodb+srv://taesan:0000@nodeproject.ennhq.mongodb.net/test?r
 
 app.get('/', (req, res) => {
   res.send('Hellow Node Js with Express Js !!')
+})
+
+app.post('/register', (req, res) => {
+    
+    const user = new User(req.body);
+    user.save((err, userInfo) => {
+        if(err)
+            return res.json({ success: false, err })
+        return res.status(200).json({
+            success: true
+        })
+    })
 })
 
 app.listen(port, () => {
