@@ -23,6 +23,10 @@ app.get('/', (req, res) => {
   res.send('Hellow Node Js with Express Js !!')
 })
 
+app.get('/api/hello', (req, res) => {    
+    res.send("ho ho ho tae san");
+})
+
 app.post('/api/users/register', (req, res) => {
     
     const user = new User(req.body);
