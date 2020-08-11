@@ -3,14 +3,16 @@ const app = express()
 const port = 5000
 const mongoose = require("mongoose")
 const bodyParser = require('body-parser');
-const cookieParesr = require('cookie-parser');
+const cookieParser = require('cookie-parser');
 const config = require('./config/key');
+const { auth } = require("./middleware/auth");
 const { User } = require("./models/User");
 
 // application/x-www-form-unlencoded
 app.use(bodyParser.urlencoded({extended: true}));
 // application/json
 app.use(bodyParser.json());
+app.use(cookieParser());
 
 mongoose.connect(config.mongoURI,{
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false
@@ -21,7 +23,7 @@ app.get('/', (req, res) => {
   res.send('Hellow Node Js with Express Js !!')
 })
 
-app.post('/register', (req, res) => {
+app.post('/api/users/register', (req, res) => {
     
     const user = new User(req.body);
     user.save((err, userInfo) => {
@@ -33,7 +35,7 @@ app.post('/register', (req, res) => {
     })
 })
 
-app.post('/login', (req, res) => {
+app.post('/api/users/login', (req, res) => {
      User.findOne({ email : req.body.email }, (err, user) => {
          if(!user) {
              return res.json({
@@ -62,6 +64,37 @@ app.post('/login', (req, res) => {
          })
 
      })
+})
+
+// req받은 후, callback function 호출 전 수행되는 함수.. auth !
+app.get('/api/users/auth', auth, (req, res) => {
+    
+    // middle ware를 통과 해야지 하위 코드를 탈 수 있음 !
+    res.status(200).json({
+        _id: req.user._id,
+        // 0아니면 admin.. (뭔가 이상하긴하지만..ㅎㅎ)
+        isAdmin: req.user.role === 0 ? false : true,
+        isAuth : true,
+        email: req.user.email,
+        lastname: req.user.lastname,
+        role: req.user.role,
+        image: req.user.image
+    })
+})
+
+app.get('/api/users/logout', auth, (req, res) => {
+
+    User.findOneAndUpdate(
+        {_id: req.user._id},
+        {token : ""},
+        (err, user) => {
+            if (err)
+                return res.json({ success: false, err });
+                return res.status(200).send({
+                    success: true
+                })
+        }
+    )
 })
 
 app.listen(port, () => {
