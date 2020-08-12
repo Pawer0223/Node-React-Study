@@ -9,12 +9,11 @@ function LandingPage(props) {
     }, [])
 
     const onClickHandler = () => {
-        axios.get('api/users/logout')
-        .then(response => {
+        axios.get('api/users/logout').then(response => {
             if (response.data.success){
-                props.history.push("/login")
+                props.history.push('/login');
             } else {
-                alert("로그아웃 실패.")
+                alert("로그아웃 실패")
             }
         })
     }

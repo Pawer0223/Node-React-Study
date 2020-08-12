@@ -82,7 +82,7 @@ userSchema.statics.findByToken = function(token, cb) {
     var user = this;
 
     // 토큰 decode
-    jwt.verify(token, 'secretToken', function(err, decoded) { // 이게 언제 어디서 들어오지.. ?
+    jwt.verify(token, 'secretToken', function(err, decoded) { // 이게 언제 어디서 들어오지.. ? , 아 이게 verify하면 return 되어서 마지막 callback함수 돌 때 쓰이는 갑다
         user.findOne({
             "_id": decoded,
             "token": token
