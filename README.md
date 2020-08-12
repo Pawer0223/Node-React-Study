@@ -6,8 +6,8 @@
 - React.js 개념공부 -> [(링크)](https://velopert.com/3612)
 - 프론트엔드 라이브러리.
 - 데이터가 바뀔 때, update가 아닌 delete -> create를 Virtual DOM을 사용하여 빠르게 가능하도록 해준다.
-  -리덕스(Redux)?
-    - [(링크)](https://velopert.com/3528)
+    - 리덕스(Redux)?
+      - [(링크)](https://velopert.com/3528)
 
 ## Node.js
 - Node.js 개념공부 -> [(링크)](https://velopert.com/133)
