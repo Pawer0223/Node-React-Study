@@ -19,7 +19,8 @@
     - 주로 서버에서 받아온 데이터를 화면에 표시할 때 사용.
     - 비동기 통신이 완료 되기 전에, 다음 코드를 실행하게 되는 문제점을 해결하기 위한 방법 중 하나.
     - [(참조)](https://joshua1988.github.io/web-development/javascript/promise-for-beginners/)
-
+    
+- Hook ? [참조](https://ko.reactjs.org/docs/hooks-intro.html)
 ## Node.js
 - Node.js 개념공부 -> [(링크)](https://velopert.com/133)
 - 구글 Chrome의 자바스크립트 엔진(V8 Engine)에 기반하여 만들어진 ServerSide플랫폼.
