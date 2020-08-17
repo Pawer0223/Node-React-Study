@@ -103,8 +103,12 @@ app.get('/api/users/logout', auth, (req, res) => {
 })
 
 app.get('/api/users/selectAll', (req, res) => {
+
+    let temp = {
+        email: "taesan@email.com"
+    }
      
-    User.find({}, function(err, docs){
+    User.find(temp, function(err, docs){
         let size = docs.length;
 
         docs.forEach(user => {
