@@ -8,6 +8,11 @@
 - 데이터가 바뀔 때, update가 아닌 delete -> create를 Virtual DOM을 사용하여 빠르게 가능하도록 해준다.
     - 리덕스(Redux)?
       - [(링크)](https://velopert.com/3528)
+- 자바스크립트 Promise란 ??
+    - 비동기 처리에 사용되는 객체. [(비동기 통신?)](https://joshua1988.github.io/web-development/javascript/javascript-asynchronous-operation/)
+    - 주로 서버에서 받아온 데이터를 화면에 표시할 때 사용.
+    - 비동기 통신이 완료 되기 전에, 다음 코드를 실행하게 되는 문제점을 해결하기 위한 방법 중 하나.
+    - [(참조)](https://joshua1988.github.io/web-development/javascript/promise-for-beginners/)
 
 ## Node.js
 - Node.js 개념공부 -> [(링크)](https://velopert.com/133)
