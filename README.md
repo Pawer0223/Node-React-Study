@@ -7,6 +7,7 @@
 - 프론트엔드 라이브러리.
 - 데이터가 바뀔 때, update가 아닌 delete -> create를 Virtual DOM을 사용하여 빠르게 가능하도록 해준다.
     - 리덕스(Redux)?
+      - [ Context API란 ] (https://ideveloper2.tistory.com/136)
       - [(링크)](https://velopert.com/3528)
 - 자바스크립트 Promise란 ??
     - 비동기 처리에 사용되는 객체. [(비동기 통신?)](https://joshua1988.github.io/web-development/javascript/javascript-asynchronous-operation/)
