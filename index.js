@@ -39,6 +39,7 @@ app.post('/api/users/register', (req, res) => {
     })
 })
 
+
 app.post('/api/users/login', (req, res) => {
      User.findOne({ email : req.body.email }, (err, user) => {
          if(!user) {
@@ -99,6 +100,19 @@ app.get('/api/users/logout', auth, (req, res) => {
             })
         }
     )
+})
+
+app.get('/api/users/selectAll', (req, res) => {
+     
+    User.find({}, function(err, docs){
+        let size = docs.length;
+
+        docs.forEach(user => {
+            let = u = new User(user);
+            console.log(u.name);
+        });
+
+    })
 })
 
 app.listen(port, () => {
