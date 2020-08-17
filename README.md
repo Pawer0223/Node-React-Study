@@ -7,7 +7,8 @@
 - 프론트엔드 라이브러리.
 - 데이터가 바뀔 때, update가 아닌 delete -> create를 Virtual DOM을 사용하여 빠르게 가능하도록 해준다.
     - 리덕스(Redux)?
-      - 선수 지식 -> [ (Context API란?) ] (https://velopert.com/3606)
+      - 선수 지식1 -> [(Context API란?)](https://velopert.com/3606)
+      - 선수 지식2 -> [(미들웨어 이해하기)](https://velopert.com/3401)
       - 리덕스 -> [(참조 링크)](https://velopert.com/3528)
         - JavaScript 어플리케이션에서 데이터 교류 및 state관리를 쉽고 효율적으로 하게 해주는 도구 !
         - store: React.js 프로젝트에서 사용하는 모든 동적 데이터들을 담아두는 곳 입니다.
