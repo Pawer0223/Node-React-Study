@@ -38,6 +38,8 @@
 - 리덕스(Redux)?
     - [Context API란?](https://velopert.com/3606)
     - [미들웨어 이해하기](https://velopert.com/3401)
+      - redux-thunk는 미들웨어 이다.
+      - 비동기 작업을 다루며, 특정 작업을 나중에 하도록 미루기 위해 함수형태로 감싼것이다.
     - [리덕스 ?](https://velopert.com/3528)
       - JavaScript 어플리케이션에서 데이터 교류 및 state관리를 쉽고 효율적으로 하게 해주는 도구 !
       - store: React.js 프로젝트에서 사용하는 모든 동적 데이터들을 담아두는 곳 입니다.
