@@ -14,6 +14,18 @@
         - store: React.js 프로젝트에서 사용하는 모든 동적 데이터들을 담아두는 곳 입니다.
         - action: 어떤 변화가 일어나야 할 지 나타내는 객체입니다.
         - reducer: action 객체를 받았을 때, 데이터를 어떻게 바꿀지 처리할지 정의하는 객체입니다.
+- 컴포넌트 만드는 방법
+    - 1. Component클래스를 상속
+      - 반드시 render() 함수가 있어야 함.
+      - 내부에서 [JSX](https://velopert.com/3626)를 return 해주어야 함.
+      - export를 해주어야, 다른 곳에서 불러와서 사용할 수 있음.
+      
+    - 2. 함수를 통해서 만들기
+      - a...
+      - b...
+  - 브라우저 상에서 리액트 컴포넌트를 보여주기 위해서 react-dom의 render함수를 사용.
+      - 첫번째 파라미터는 렌더링 할 결과물, 두번째 파라미터는 컴포넌트를 어떤 DOM에 그릴지
+
 - 자바스크립트 Promise란 ??
     - 비동기 처리에 사용되는 객체. [(비동기 통신?)](https://joshua1988.github.io/web-development/javascript/javascript-asynchronous-operation/)
     - 주로 서버에서 받아온 데이터를 화면에 표시할 때 사용.
