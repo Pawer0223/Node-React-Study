@@ -1,6 +1,8 @@
 # Node & React 사용하여 기본적인 웹 페이지 구현하기.
 
-- 참조 강의 [(링크)](https://www.inflearn.com/course/%EB%94%B0%EB%9D%BC%ED%95%98%EB%A9%B0-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%85%B8%EB%93%9C-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EA%B8%B0%EB%B3%B8/dashboard)
+- 실습 참조 강의 [(링크)](https://www.inflearn.com/course/%EB%94%B0%EB%9D%BC%ED%95%98%EB%A9%B0-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%85%B8%EB%93%9C-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EA%B8%B0%EB%B3%B8/dashboard)
+
+- 정리한 내용 참조 사이트 [velopert](https://velopert.com/)
 
 ## React.js
 - React.js 개념공부 -> [(링크)](https://velopert.com/3612)
@@ -29,7 +31,9 @@
       - state는 컴포넌트 내부에서 선언하며, 내부에서 값을 변경 할 수 있다.
       - state를 정의할 대는 class fields 문법을 사용해서 정의한다.
       - state에 있는 값을 바꾸기 위해서는, this.setState를 무조건 거쳐야 한다. 리액트에서는, 이 함수가 호출되면 컴포넌트가 <b>리렌더링</b> 되도록 설계되어있다.
-  
+- [LifeCycle API ?](https://velopert.com/3631)
+   - 컴포넌트가 브라우저에서 나타기 전,후 또는 변화를 감지하고 불필요한 cpu사용을 방지하거나, 컴포넌트를 제거 등의 컴포넌트를 관리하기 위해 호출되는 함수들 !
+
    
 - 리덕스(Redux)?
     - [Context API란?](https://velopert.com/3606)
