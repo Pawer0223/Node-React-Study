@@ -6,14 +6,7 @@
 - React.js 개념공부 -> [(링크)](https://velopert.com/3612)
 - 프론트엔드 라이브러리.
 - 데이터가 바뀔 때, update가 아닌 delete -> create를 Virtual DOM을 사용하여 빠르게 가능하도록 해준다.
-    - 리덕스(Redux)?
-      - 선수 지식1 -> [(Context API란?)](https://velopert.com/3606)
-      - 선수 지식2 -> [(미들웨어 이해하기)](https://velopert.com/3401)
-      - 리덕스 -> [(참조 링크)](https://velopert.com/3528)
-        - JavaScript 어플리케이션에서 데이터 교류 및 state관리를 쉽고 효율적으로 하게 해주는 도구 !
-        - store: React.js 프로젝트에서 사용하는 모든 동적 데이터들을 담아두는 곳 입니다.
-        - action: 어떤 변화가 일어나야 할 지 나타내는 객체입니다.
-        - reducer: action 객체를 받았을 때, 데이터를 어떻게 바꿀지 처리할지 정의하는 객체입니다.
+- 여러 컴포넌트를 정의한 후, 렌더링하여 브라우저에 나타낸다
 - 컴포넌트 만드는 방법
     - 1. Component클래스를 상속
       - 반드시 render() 함수가 있어야 함.
@@ -25,6 +18,24 @@
       - b...
   - 브라우저 상에서 리액트 컴포넌트를 보여주기 위해서 react-dom의 render함수를 사용.
       - 첫번째 파라미터는 렌더링 할 결과물, 두번째 파라미터는 컴포넌트를 어떤 DOM에 그릴지
+- props와 state ?
+    - 1. props
+      - a..
+      - b..
+    - 2. state
+      - a..
+      - b..
+  
+   
+- 리덕스(Redux)?
+    - [Context API란?](https://velopert.com/3606)
+    - [미들웨어 이해하기](https://velopert.com/3401)
+    - [리덕스 ?](https://velopert.com/3528)
+      - JavaScript 어플리케이션에서 데이터 교류 및 state관리를 쉽고 효율적으로 하게 해주는 도구 !
+      - store: React.js 프로젝트에서 사용하는 모든 동적 데이터들을 담아두는 곳 입니다.
+      - action: 어떤 변화가 일어나야 할 지 나타내는 객체입니다.
+      - reducer: action 객체를 받았을 때, 데이터를 어떻게 바꿀지 처리할지 정의하는 객체입니다.
+
 
 - 자바스크립트 Promise란 ??
     - 비동기 처리에 사용되는 객체. [(비동기 통신?)](https://joshua1988.github.io/web-development/javascript/javascript-asynchronous-operation/)
