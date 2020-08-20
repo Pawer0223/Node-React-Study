@@ -13,7 +13,6 @@ function RegisterPage(props) {
     const [Password, setPassword] = useState("")
     const [ConfirmPassword, setConfirmPassword] = useState("")
 
-
     const onEmailHandler = (event) => {
         setEmail(event.currentTarget.value)
     }
