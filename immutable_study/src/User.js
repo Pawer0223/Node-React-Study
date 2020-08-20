@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 class User extends Component {
-  shouldComponentUpdate(prevProps, prevState) {
-    return this.props.user !== prevProps.user;
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props.user !== nextProps.user;
   }
   render() {
     const { username } = this.props.user.toJS(); // 비 구조화 할당
