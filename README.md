@@ -2,8 +2,9 @@
 
 - 실습 참조 강의 [(링크)](https://www.inflearn.com/course/%EB%94%B0%EB%9D%BC%ED%95%98%EB%A9%B0-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%85%B8%EB%93%9C-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EA%B8%B0%EB%B3%B8/dashboard)
 
-- 정리한 내용 참조 사이트 [velopert](https://velopert.com/)
-
+- 정리한 내용 참조 사이트 
+   - [velopert](https://velopert.com/)
+   - [Captain Pangyo](https://joshua1988.github.io/web-development/javascript/javascript-asynchronous-operation/)
 ## React.js
 - React.js 개념공부 -> [(링크)](https://velopert.com/3612)
 - 프론트엔드 라이브러리.
@@ -56,13 +57,37 @@
       - store: React.js 프로젝트에서 사용하는 모든 동적 데이터들을 담아두는 곳 입니다.
       - action: 어떤 변화가 일어나야 할 지 나타내는 객체입니다.
       - reducer: action 객체를 받았을 때, 데이터를 어떻게 바꿀지 처리할지 정의하는 객체입니다.
+- [비동기 통신](https://joshua1988.github.io/web-development/javascript/javascript-asynchronous-operation/)
+    - 특정 코드의 연산이 끝날 때까지 코드의 실행을 멈추지 않고 다음 코드를 먼저 실행하는 자바스크립트의 특성
+- 콜백 함수
+    - 비동기 통신이 끝난 후에 수행되어야 하는 코드를, Callback함수에 정의한다.
+    - Callback함수가 연속해서 사용되다보면, 가독성도 떨어지고 변경도 어려워진다.., 콜백 지옥이 발생한다.
+- 콜백 지옥을 해결하는 2가지 방법
+    - [Promise](https://joshua1988.github.io/web-development/javascript/promise-for-beginners/)
+        - 프로미스는 3가지 상태를 가지며 처리된다.
+          - Pending(대기): 비동기 처리 로직이 완료되지 않은 상태 
+            - new Promise()를 호출하면 대기(Pending)상태가 된다.
+            - new Promise()메서드를 호출할 때, 콜백 함수를 선언할 수 있다.
+            - 콜백 함수의 인자는 resolve, reject이다.
+          - Fullfilled(이행 또는 완료) : 비동기 처리가 완료되어 Promise가 결과 값을 반환해준 상태
+            - 콜백 함수의 인자 resolve()를 실행하면 이행(Fullfilled)상태가 된다.
+            - 이행 상태가 되면 then()을 이용하여 처리 결과 값을 받을 수 있다.
+            - then()메서드를 호출하고 나면 새로운 프로미스 객체가 반환된다. ( 따라서 여러 개의 프로미스를 연결하여 사용할 수 있다. )
+          - Rejected(실패)
+            - 콜백 함수의 2번째 인자 reject()를 호출하면 실패(Rejected)상태가 된다.
+            - 실패 상태가 되면 실패한 이유를 catch()로 받을 수 있다.
+            - 실패처리를 then()의 두 번째 인자로 error처리 함수를 정의하여 처리할 수도 있다. 하지만 이 경우 Fullfilled상태의 error처리가 정상적으로 수행되지 않는 경우가 존재하기 때문에 catch사용을 권장.
+                    
+    - [Async](https://joshua1988.github.io/web-development/javascript/js-async-await/)
+      - 콜백 함수와 프로미스의 단점을 보완하여, 가독성을 높인 코드를 작성할 수 있게 도와준다.
+      - ``` 
+        async function 함수명() {
+            await 비동기_처리_메서드_명();
+        }
+        ```
+        과 같이 사용한다.
+      - 예외 처리방법은 try catch이다.
 
-
-- 자바스크립트 Promise란 ??
-    - 비동기 처리에 사용되는 객체. [(비동기 통신?)](https://joshua1988.github.io/web-development/javascript/javascript-asynchronous-operation/)
-    - 주로 서버에서 받아온 데이터를 화면에 표시할 때 사용.
-    - 비동기 통신이 완료 되기 전에, 다음 코드를 실행하게 되는 문제점을 해결하기 위한 방법 중 하나.
-    - [(참조)](https://joshua1988.github.io/web-development/javascript/promise-for-beginners/)
  - [자바스크립트 비 구조화 할당 ??](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
     
 - Hook ? [참조](https://ko.reactjs.org/docs/hooks-intro.html)
