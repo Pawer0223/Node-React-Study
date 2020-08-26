@@ -80,12 +80,12 @@
                     
     - [Async](https://joshua1988.github.io/web-development/javascript/js-async-await/)
       - 콜백 함수와 프로미스의 단점을 보완하여, 가독성을 높인 코드를 작성할 수 있게 도와준다.
-      - ``` 
+      - 기본 문법
+      ``` 
         async function 함수명() {
             await 비동기_처리_메서드_명();
         }
         ```
-        과 같이 사용한다.
       - 예외 처리방법은 try catch이다.
 
  - [자바스크립트 비 구조화 할당 ??](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
