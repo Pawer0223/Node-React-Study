@@ -57,6 +57,23 @@
       - store: React.js 프로젝트에서 사용하는 모든 동적 데이터들을 담아두는 곳 입니다.
       - action: 어떤 변화가 일어나야 할 지 나타내는 객체입니다.
       - reducer: action 객체를 받았을 때, 데이터를 어떻게 바꿀지 처리할지 정의하는 객체입니다.
+      
+- Hook ? [참조](https://ko.reactjs.org/docs/hooks-intro.html)
+
+- [라우팅 방법?](https://www.daleseo.com/react-router-basic/)
+   - React Reouter는 SPA라우팅 문제를 해결하기 위해 거의 표준처럼 사용되고 있는 네비게이션 라이브러리 이다.
+      - SPA에서 발생할 수 있는 문제들 ( URL고정, 뒤로가기 클릭 시 홈페이지 유지안 됨, 새로고침시 home으로 이동 등등 )을 해결할 수 있다.
+   - React Router의 핵심 컴포넌트
+      - Link
+         - ```<a>```와 유사한 기능. ```href```로 경로 지정하는 것이 Link에서는 ```to```` prop을 통해 지정 함.
+      - Route
+         - url과 매칭되는 컴포넌트를 지정할 수 있다.
+         - ```component``` prop에 매칭 될 컴포넌트를 지정.
+      - Router
+         - ```Router```와 ```Link```컴포넌트가 유기적으로 동작하도록 묶어주는데 사용한다. 즉, Router와 Link컴포넌트는 DOM트리상에서 항상  Router를 공통 상위 컴포넌트로 가져야한다.
+      
+## Javascript
+
 - [비동기 통신](https://joshua1988.github.io/web-development/javascript/javascript-asynchronous-operation/)
     - 특정 코드의 연산이 끝날 때까지 코드의 실행을 멈추지 않고 다음 코드를 먼저 실행하는 자바스크립트의 특성
 - 콜백 함수
@@ -89,8 +106,7 @@
       - 예외 처리방법은 try catch이다.
 
  - [자바스크립트 비 구조화 할당 ??](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-    
-- Hook ? [참조](https://ko.reactjs.org/docs/hooks-intro.html)
+
 ## Node.js
 - Node.js 개념공부 -> [(링크)](https://velopert.com/133)
 - 구글 Chrome의 자바스크립트 엔진(V8 Engine)에 기반하여 만들어진 ServerSide플랫폼.
