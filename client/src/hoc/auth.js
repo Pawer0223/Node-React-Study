@@ -4,8 +4,8 @@ import { auth } from '../_actions/user_action';
 
 export default function (SpecificComponent, option, adminRoute = null ){
 
-    // null == 아무나
-    // false == 로그인한 유저만
+    // null == 아무나 출입가능
+    // false == 로그인한 유저만 출입가능
     // true == 로그인한 유저는 출입불가
     function AuthenticationCheck(props) {
         const dispatch = useDispatch();

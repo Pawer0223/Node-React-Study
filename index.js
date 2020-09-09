@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 5000
+const port = 5001
 const mongoose = require("mongoose")
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -38,7 +38,6 @@ app.post('/api/users/register', (req, res) => {
         })
     })
 })
-
 
 app.post('/api/users/login', (req, res) => {
      User.findOne({ email : req.body.email }, (err, user) => {
@@ -110,12 +109,10 @@ app.get('/api/users/selectAll', (req, res) => {
      
     User.find(temp, function(err, docs){
         let size = docs.length;
-
         docs.forEach(user => {
-            let = u = new User(user);
+            let u = new User(user);
             console.log(u.name);
         });
-
     })
 })
 
