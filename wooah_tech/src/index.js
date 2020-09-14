@@ -1,17 +1,22 @@
-const list = [
-  { title : "React에 대해 알아봅시다."},
-  { title : "Redux에 대해 알아봅시다."},
-  { title : "TypeScript에 대해 알아봅시다."}
-];
+/* @jsx createElement */
 
-const rootElement = document.getElementById("root");
+import { createElement, render } from "./tiny-react";
 
-function app(items) {
-  rootElement.innerHTML = `
-    <ul>
-      ${items.map((item) => `<li>${item.title}</li>`).join("")}
-    </ul>
-  `;
+function Hello(props) {
+  return <li className="item">{props.label}</li>;
 }
 
-app(list);
+function App() {
+  return (
+    <div>
+      <h1>hello world</h1>
+      <ul className="board" onClick={() => null}>
+        <Hello label="Hello" />
+        <Hello label="World" />
+        <Hello label="React" />
+      </ul>
+    </div>
+  );
+}
+
+render(<App />, document.getElementById("root"));
